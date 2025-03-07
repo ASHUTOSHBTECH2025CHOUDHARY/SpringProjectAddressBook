@@ -1,15 +1,13 @@
-package com.AddressBook.Address.model;
+package com.AddressBook.Address.dto;
 
-import jakarta.persistence.*;
+
+
 import lombok.*;
 
-@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Address {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class AddressDTO {
     private Long id;
     private String name;
     private String phone;
