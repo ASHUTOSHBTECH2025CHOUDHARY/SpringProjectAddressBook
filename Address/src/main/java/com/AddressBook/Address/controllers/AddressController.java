@@ -3,6 +3,7 @@
     import com.AddressBook.Address.dto.AddressDTO;
     import com.AddressBook.Address.model.Address;
     import com.AddressBook.Address.service.AddressService;
+    import org.springframework.beans.factory.annotation.Autowired;
     import org.springframework.http.ResponseEntity;
     import org.springframework.web.bind.annotation.*;
 
@@ -11,7 +12,8 @@
     @RestController
     @RequestMapping("/addresses")
     public class AddressController {
-        private final AddressService service;
+        @Autowired
+        AddressService service;
 
         public AddressController(AddressService service) {
             this.service = service;

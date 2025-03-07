@@ -3,6 +3,7 @@ package com.AddressBook.Address.service;
 import com.AddressBook.Address.dto.AddressDTO;
 import com.AddressBook.Address.model.Address;
 import com.AddressBook.Address.repository.AddressRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,7 +11,8 @@ import java.util.stream.Collectors;
 
 @Service
 public class AddressService {
-    private final AddressRepository repository;
+    @Autowired
+    AddressRepository repository;
 
     public AddressService(AddressRepository repository) {
         this.repository = repository;
